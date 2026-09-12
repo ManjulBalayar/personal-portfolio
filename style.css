@@ -81,7 +81,6 @@ header {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.35s var(--ease), background 0.35s var(--ease);
-  view-transition-name: nav;
 }
 
 header.is-scrolled {
@@ -595,7 +594,7 @@ footer a:hover {
   }
 }
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
@@ -604,16 +603,6 @@ footer a:hover {
 .reveal.is-in {
   opacity: 1;
   transform: none;
-}
-
-@view-transition {
-  navigation: auto;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.45s;
-  animation-timing-function: var(--ease);
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */
